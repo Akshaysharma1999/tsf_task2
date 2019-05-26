@@ -29,6 +29,23 @@ const Users = db.define('users',{
     
 })
 
+const Transactions = db.define('transactions',{
+
+    from:{
+        type : Sequelize.STRING,
+        allowNull : false,
+    },
+    to:{
+        type : Sequelize.STRING,
+        allowNull : false,
+    },
+   time:{
+       type:Sequelize.DATE,
+       allowNull:false,
+   }
+    
+})
+
 module.exports = {
-    db,Users
+    db,Users, Transactions
 }

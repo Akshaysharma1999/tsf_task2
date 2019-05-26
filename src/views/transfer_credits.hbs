@@ -9,9 +9,12 @@
 </head>
 
 <body>
-
    
-
+    {{#each users}}
+        <form action="/credits_management/{{this.id}}" method="post">
+            <button type="submit">{{this.name}}</button>
+        </form>
+    {{/each}}
 </body>
 
 </html>
