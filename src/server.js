@@ -7,6 +7,10 @@ app.use(express.urlencoded({ extended: true }))
 
 app.set('view engine', 'hbs')
 
+app.get('/',(req,res,next)=>{
+  res.render('home')
+ 
+})
 app.use('/', require('./routes/main'))
 app.use('/', require('./routes/admin'))
 
