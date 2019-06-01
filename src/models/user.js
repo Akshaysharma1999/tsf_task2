@@ -1,11 +1,12 @@
 const Sequelize = require('sequelize')
 
+// mysql://bc7e130ec2910c:515263d3@us-cdbr-iron-east-02.cleardb.net/heroku_fabd7d90832c378?reconnect=true
 const db = new Sequelize(
-    'task2', // database name
-    'task2', // username
-    'task2',  // password
+    'heroku_fabd7d90832c378', // database name
+    'bc7e130ec2910c', // username
+    '515263d3',  // password
     {
-        host: 'localhost',
+        host: 'us-cdbr-iron-east-02.cleardb.net',
         dialect:'mysql'
     }
 )
