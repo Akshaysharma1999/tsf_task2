@@ -25,7 +25,7 @@ const Users = db.define('users',{
    },
    credit:{
        type:Sequelize.INTEGER,
-       defaultValue:0,
+       defaultValue:10,
    }
     
 })
