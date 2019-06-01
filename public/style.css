@@ -6,9 +6,9 @@ body, html {
     background-image: url("img12.jpg");
     height: 100%; 
     background-position: center;
-    background-repeat: repeat;  
+     
     background-size: cover;
-  }
+  } 
 
   .btn{
       color: white;
