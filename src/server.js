@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const db = require('./models/user').db
 
+const server_port = process.env.PORT || 3000
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -16,5 +18,6 @@ app.get('/',(req,res,next)=>{
 app.use('/', require('./routes/main'))
 app.use('/', require('./routes/admin'))
 
+
 db.sync()
-  .then(app.listen(3000, () => { console.log('http://localhost:3000/') }))
+  .then(app.listen(server_port, () => { console.log('http://localhost:3000/') }))
