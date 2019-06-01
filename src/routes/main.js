@@ -24,9 +24,12 @@ route.get('/user/:id', (req, res, next) => {
 })
 
 let s_id
+let qty
 
 route.post('/transfer_credits', (req, res, next) => {
 
+   // console.log(req.body.quantity)
+   qty = parseInt(req.body.quantity)
    s_id = req.body.id
    Users.findAll()
       .then((users) => {
@@ -44,14 +47,14 @@ route.post('/credits_management/:id', (req, res, next) => {
          f_usert = f_user
          // console.log('fuser')
          // console.log(f_user)
-         f_user.credit -= 1
+         f_user.credit -= qty
          f_user.save()
                .then(() => {
                   Users.findOne({ where: { id: req.params.id } })
                      .then((t_user) => {
                         // console.log('t_user')
                         // console.log(t_user)
-                        t_user.credit += 1
+                        t_user.credit += qty
                         t_user.save()
                            .then(() => {
                               // console.log(t_user)
