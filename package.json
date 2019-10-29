@@ -20,7 +20,7 @@
     "express": "^4.17.0",
     "hbs": "^4.0.4",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.15.1"
   },
   "engines": {
     "node": "11.6.0" ,
