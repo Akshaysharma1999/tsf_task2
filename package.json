@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Akshaysharma1999/tsf_task2#readme",
   "dependencies": {
-    "express": "^4.17.0",
+    "express": "^4.18.2",
     "hbs": "^4.0.4",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.6"
